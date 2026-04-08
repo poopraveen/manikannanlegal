@@ -126,10 +126,10 @@
       color: var(--gold); font-weight: 500;
     }
     .nav-links {
-      display: flex; align-items: center; gap: 36px;
+      display: flex; align-items: center; gap: 28px;
     }
     .nav-links a {
-      font-size: .82rem; font-weight: 500; letter-spacing: .06em;
+      font-size: .78rem; font-weight: 500; letter-spacing: .05em;
       text-transform: uppercase; color: rgba(255,255,255,.75);
       transition: var(--transition); position: relative;
     }
@@ -181,7 +181,7 @@
     .hero-content {
       position: relative; z-index: 2;
       padding: 140px 0 100px;
-      display: grid; grid-template-columns: 1fr 420px; gap: 80px; align-items: center;
+      display: grid; grid-template-columns: 1fr 400px; gap: 60px; align-items: center;
     }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
@@ -198,8 +198,8 @@
     }
     .hero-headline {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.8rem, 6vw, 5rem);
-      font-weight: 600; line-height: 1.1; color: var(--white);
+      font-size: clamp(2.2rem, 4.5vw, 4rem);
+      font-weight: 600; line-height: 1.12; color: var(--white);
       margin-bottom: 24px;
     }
     .hero-headline em {
@@ -254,7 +254,8 @@
     }
     .hero-card-title {
       font-family: 'Playfair Display', serif;
-      font-size: 1.05rem; font-weight: 600; color: var(--white);
+      font-size: 1.05rem; font-weight: 600; color: var(--white) !important;
+      -webkit-text-fill-color: var(--white) !important;
     }
     .hero-card-sub { font-size: .78rem; color: rgba(255,255,255,.4); margin-top: 2px; }
     .hero-card-form { display: flex; flex-direction: column; gap: 14px; }
@@ -674,6 +675,23 @@
     [data-aos="fade-right"].aos-animate { transform: none; }
     [data-aos="fade-left"] { transform: translateX(24px); }
     [data-aos="fade-left"].aos-animate { transform: none; }
+
+    /* ─── Laptop breakpoint (1280px) ────────────────────────────── */
+    @media (max-width: 1280px) {
+      #navbar .nav-inner { padding: 18px 28px; }
+      #navbar.scrolled .nav-inner { padding: 12px 28px; }
+      .nav-links { gap: 22px; }
+      .nav-links a { font-size: .74rem; }
+      .hero-content { gap: 44px; grid-template-columns: 1fr 370px; }
+      .hero-card { padding: 28px; }
+      .hero-stats { gap: 28px; }
+      .stat-num { font-size: 1.7rem; }
+      .about-grid { gap: 56px; }
+      .why-grid { gap: 56px; }
+      .practice-grid { gap: 18px; }
+      .practice-card { padding: 30px 24px; }
+      .contact-inner { gap: 56px; }
+    }
 
     /* ─── Responsive ─────────────────────────────────────────────── */
     @media (max-width: 1024px) {
