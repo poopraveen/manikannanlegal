@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advocate P. Manikannan — High Court of Madras</title>
+  <meta name="description" content="Advocate P. Manikannan — Senior legal professional practicing at the High Court of Madras. Expert in Civil, Criminal, Writ & Service Law." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:      #09132b;
+      --navy-mid:  #0e1f47;
+      --navy-soft: #132558;
+      --gold:      #b8923a;
+      --gold-light:#d4aa5a;
+      --gold-pale: #f0e0b0;
+      --cream:     #faf8f3;
+      --white:     #ffffff;
+      --gray-100:  #f5f4f0;
+      --gray-200:  #e8e4da;
+      --gray-400:  #9e9890;
+      --gray-600:  #6b6560;
+      --gray-800:  #2c2820;
+      --text:      #1a1714;
+      --radius-sm: 4px;
+      --radius-md: 10px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 2px 8px rgba(9,19,43,.08);
+      --shadow-md: 0 8px 32px rgba(9,19,43,.12);
+      --shadow-lg: 0 20px 60px rgba(9,19,43,.18);
+      --transition: .35s cubic-bezier(.4,0,.2,1);
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ─── Scrollbar ─────────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--cream); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    /* ─── Utility ───────────────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: .72rem; font-weight: 600; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .section-label::before {
+      content: ''; display: block; width: 28px; height: 1px; background: var(--gold);
+    }
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      font-weight: 600; line-height: 1.2;
+      color: var(--navy);
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+    .section-sub {
+      font-size: 1.05rem; color: var(--gray-600);
+      max-width: 540px; line-height: 1.7; margin-top: 12px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 30px; border-radius: var(--radius-sm);
+      font-size: .9rem; font-weight: 600; letter-spacing: .04em;
+      cursor: pointer; border: none; transition: var(--transition);
+    }
+    .btn-primary {
+      background: var(--gold); color: var(--navy);
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(184,146,58,.3); }
+    .btn-outline {
+      background: transparent; color: var(--white);
+      border: 1.5px solid rgba(255,255,255,.35);
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .divider-gold {
+      width: 56px; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      border-radius: 2px; margin: 20px 0;
+    }
+
+    /* ─── Navbar ────────────────────────────────────────────────── */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      transition: var(--transition);
+      padding: 0;
+    }
+    #navbar .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 22px 40px;
+      transition: var(--transition);
+    }
+    #navbar.scrolled {
+      background: rgba(9,19,43,.97);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 rgba(184,146,58,.2);
+    }
+    #navbar.scrolled .nav-inner { padding: 14px 40px; }
+    .nav-logo {
+      display: flex; flex-direction: column;
+    }
+    .nav-logo .logo-main {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; font-weight: 700;
+      color: var(--white); letter-spacing: .03em;
+      line-height: 1.2;
+    }
+    .nav-logo .logo-sub {
+      font-size: .68rem; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--gold); font-weight: 500;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 36px;
+    }
+    .nav-links a {
+      font-size: .82rem; font-weight: 500; letter-spacing: .06em;
+      text-transform: uppercase; color: rgba(255,255,255,.75);
+      transition: var(--transition); position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 1px; background: var(--gold);
+      transform: scaleX(0); transition: var(--transition);
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-cta {
+      font-size: .8rem !important; font-weight: 600 !important;
+      color: var(--gold) !important; border: 1.5px solid var(--gold);
+      padding: 8px 20px; border-radius: var(--radius-sm);
+      letter-spacing: .06em; text-transform: uppercase;
+      transition: var(--transition);
+    }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--navy) !important; }
+    .nav-cta::after { display: none !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--transition); }
+
+    /* ─── Hero ──────────────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 50%, #162050 100%);
+      position: relative; overflow: hidden;
+      display: flex; align-items: center;
+    }
+    .hero-bg-pattern {
+      position: absolute; inset: 0; opacity: .04;
+      background-image:
+        linear-gradient(rgba(184,146,58,.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(184,146,58,.5) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-glow {
+      position: absolute; top: -20%; right: -10%;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(184,146,58,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-glow-2 {
+      position: absolute; bottom: -30%; left: -10%;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(19,37,88,.6) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      padding: 140px 0 100px;
+      display: grid; grid-template-columns: 1fr 420px; gap: 80px; align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(184,146,58,.15); border: 1px solid rgba(184,146,58,.3);
+      border-radius: 100px; padding: 7px 18px;
+      font-size: .75rem; font-weight: 600; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--gold-light);
+      margin-bottom: 28px;
+    }
+    .hero-badge::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); display: block;
+      box-shadow: 0 0 6px var(--gold);
+    }
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 600; line-height: 1.1; color: var(--white);
+      margin-bottom: 24px;
+    }
+    .hero-headline em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 1.1rem; color: rgba(255,255,255,.6);
+      max-width: 520px; line-height: 1.75; margin-bottom: 40px;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-stats {
+      display: flex; gap: 40px; margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .stat-item { display: flex; flex-direction: column; gap: 4px; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 700;
+      color: var(--gold-light); line-height: 1;
+    }
+    .stat-label {
+      font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,.45);
+    }
+    /* Hero Card */
+    .hero-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(184,146,58,.2);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      backdrop-filter: blur(20px);
+      position: relative;
+    }
+    .hero-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .hero-card-header {
+      display: flex; align-items: center; gap: 14px; margin-bottom: 24px;
+    }
+    .hero-card-icon {
+      width: 48px; height: 48px; border-radius: var(--radius-sm);
+      background: rgba(184,146,58,.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+    }
+    .hero-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem; font-weight: 600; color: var(--white);
+    }
+    .hero-card-sub { font-size: .78rem; color: rgba(255,255,255,.4); margin-top: 2px; }
+    .hero-card-form { display: flex; flex-direction: column; gap: 14px; }
+    .form-field {
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .form-field label { font-size: .75rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: rgba(255,255,255,.45); }
+    .form-field input, .form-field select, .form-field textarea {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: .9rem; color: var(--white);
+      outline: none; transition: var(--transition);
+    }
+    .form-field input::placeholder, .form-field textarea::placeholder { color: rgba(255,255,255,.25); }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+      border-color: var(--gold); background: rgba(184,146,58,.06);
+    }
+    .form-field select option { background: var(--navy-mid); color: var(--white); }
+    .form-field textarea { resize: none; height: 80px; }
+    .form-submit {
+      width: 100%; padding: 14px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      border: none; border-radius: var(--radius-sm);
+      font-family: 'Inter', sans-serif;
+      font-size: .9rem; font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase; color: var(--navy);
+      cursor: pointer; transition: var(--transition);
+      margin-top: 4px;
+    }
+    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(184,146,58,.4); }
+
+    /* ─── Marquee Bar ────────────────────────────────────────────── */
+    .marquee-bar {
+      background: var(--navy-mid);
+      border-top: 1px solid rgba(184,146,58,.15);
+      border-bottom: 1px solid rgba(184,146,58,.15);
+      overflow: hidden; padding: 0;
+    }
+    .marquee-track {
+      display: flex; gap: 0;
+      animation: marquee 28s linear infinite;
+      white-space: nowrap;
+    }
+    .marquee-item {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 32px;
+      font-size: .75rem; font-weight: 600; letter-spacing: .12em;
+      text-transform: uppercase; color: rgba(255,255,255,.45);
+    }
+    .marquee-item span { color: var(--gold); font-size: .9rem; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ─── About ─────────────────────────────────────────────────── */
+    #about { padding: 120px 0; background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-visual { position: relative; }
+    .about-img-frame {
+      position: relative; z-index: 1;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-soft) 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .about-img-inner {
+      text-align: center; padding: 40px;
+    }
+    .about-initials {
+      font-family: 'Playfair Display', serif;
+      font-size: 6rem; font-weight: 700;
+      color: rgba(184,146,58,.25); line-height: 1;
+      display: block;
+    }
+    .about-name-plate {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; color: var(--white);
+      margin-top: 16px; line-height: 1.3;
+    }
+    .about-court-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(184,146,58,.15); border: 1px solid rgba(184,146,58,.3);
+      border-radius: 100px; padding: 6px 16px; margin-top: 12px;
+      font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .about-corner-deco {
+      position: absolute; z-index: 2;
+    }
+    .about-corner-deco.tl { top: -16px; left: -16px; }
+    .about-corner-deco.br { bottom: -16px; right: -16px; }
+    .about-corner-deco svg { width: 56px; height: 56px; }
+    .about-accent-card {
+      position: absolute; z-index: 3;
+      right: -32px; top: 40px;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      box-shadow: var(--shadow-lg);
+      border-left: 3px solid var(--gold);
+      min-width: 180px;
+    }
+    .about-accent-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 700; color: var(--navy); line-height: 1;
+    }
+    .about-accent-lbl { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gray-400); margin-top: 4px; }
+    .about-text .section-sub { max-width: 100%; }
+    .about-text p { font-size: 1rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 16px; }
+    .about-quals {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px;
+    }
+    .qual-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--gray-100); border-radius: 100px;
+      padding: 7px 16px;
+      font-size: .78rem; font-weight: 500; color: var(--navy);
+    }
+    .qual-tag::before { content: '✦'; font-size: .6rem; color: var(--gold); }
+
+    /* ─── Practice Areas ─────────────────────────────────────────── */
+    #practice { padding: 120px 0; background: var(--cream); }
+    .practice-header { text-align: center; margin-bottom: 64px; }
+    .practice-header .section-label { justify-content: center; }
+    .practice-header .section-label::before { display: none; }
+    .practice-header .section-label::after { content: ''; display: block; width: 28px; height: 1px; background: var(--gold); }
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .practice-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 40px 32px;
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
+      position: relative; overflow: hidden;
+      cursor: default;
+    }
+    .practice-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transform: scaleX(0); transform-origin: left;
+      transition: var(--transition);
+    }
+    .practice-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: transparent; }
+    .practice-card:hover::before { transform: scaleX(1); }
+    .practice-icon {
+      width: 56px; height: 56px; border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; margin-bottom: 24px;
+    }
+    .practice-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 600; color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .practice-desc { font-size: .9rem; color: var(--gray-600); line-height: 1.7; }
+    .practice-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 20px;
+      font-size: .8rem; font-weight: 600; letter-spacing: .06em;
+      text-transform: uppercase; color: var(--gold);
+      transition: var(--transition);
+    }
+    .practice-link:hover { gap: 10px; }
+
+    /* ─── Why Choose Us ──────────────────────────────────────────── */
+    #why {
+      padding: 120px 0;
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%);
+      position: relative; overflow: hidden;
+    }
+    .why-bg-circle {
+      position: absolute; top: -200px; right: -200px;
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(184,146,58,.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; position: relative; z-index: 1; }
+    .why-text .section-title { color: var(--white); }
+    .why-text .section-sub { color: rgba(255,255,255,.55); }
+    .why-text .divider-gold { margin-bottom: 0; }
+    .why-features { display: flex; flex-direction: column; gap: 28px; margin-top: 48px; }
+    .why-feature { display: flex; gap: 18px; align-items: flex-start; }
+    .why-feature-icon {
+      width: 44px; height: 44px; border-radius: var(--radius-sm);
+      background: rgba(184,146,58,.12); border: 1px solid rgba(184,146,58,.25);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; flex-shrink: 0; margin-top: 2px;
+    }
+    .why-feature-title { font-size: .95rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .why-feature-desc { font-size: .88rem; color: rgba(255,255,255,.5); line-height: 1.65; }
+    /* Pillars */
+    .why-pillars { display: flex; flex-direction: column; gap: 20px; }
+    .pillar-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(184,146,58,.15);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      transition: var(--transition);
+      cursor: default;
+    }
+    .pillar-card:hover {
+      background: rgba(184,146,58,.07);
+      border-color: rgba(184,146,58,.35);
+      transform: translateX(6px);
+    }
+    .pillar-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem; font-weight: 700;
+      color: rgba(184,146,58,.2); line-height: 1;
+      margin-bottom: 10px;
+    }
+    .pillar-title { font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 6px; }
+    .pillar-desc { font-size: .85rem; color: rgba(255,255,255,.45); line-height: 1.65; }
+
+    /* ─── Courts & Jurisdictions ─────────────────────────────────── */
+    #courts { padding: 100px 0; background: var(--white); }
+    .courts-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+    }
+    .courts-map {
+      background: var(--gray-100);
+      border-radius: var(--radius-lg);
+      padding: 48px; text-align: center;
+      border: 1px solid var(--gray-200);
+      position: relative; overflow: hidden;
+    }
+    .courts-map::before {
+      content: '⚖';
+      font-size: 8rem; opacity: .05;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .court-list { display: flex; flex-direction: column; gap: 16px; position: relative; z-index: 1; }
+    .court-item {
+      display: flex; align-items: center; gap: 16px;
+      background: var(--white); border-radius: var(--radius-sm);
+      padding: 16px 20px; border: 1px solid var(--gray-200);
+      transition: var(--transition);
+    }
+    .court-item:hover { border-color: var(--gold); box-shadow: var(--shadow-sm); }
+    .court-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+    .court-dot.secondary { background: var(--gray-400); }
+    .court-name { font-size: .92rem; font-weight: 600; color: var(--navy); }
+    .court-type { font-size: .78rem; color: var(--gray-400); margin-left: auto; letter-spacing: .04em; }
+    .courts-text .section-sub { max-width: 100%; }
+    .courts-text p { font-size: .95rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 14px; }
+
+    /* ─── Testimonials ───────────────────────────────────────────── */
+    #testimonials { padding: 120px 0; background: var(--cream); }
+    .testi-header { text-align: center; margin-bottom: 64px; }
+    .testi-header .section-label { justify-content: center; }
+    .testi-header .section-label::before { display: none; }
+    .testi-header .section-label::after { content: ''; display: block; width: 28px; height: 1px; background: var(--gold); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testi-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 36px;
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
+      position: relative;
+    }
+    .testi-card:hover { box-shadow: var(--shadow-md); border-color: var(--gray-200); transform: translateY(-4px); }
+    .testi-quote {
+      font-size: 3rem; line-height: 1;
+      color: var(--gold-pale);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 16px;
+    }
+    .testi-text {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.05rem; font-style: italic;
+      color: var(--gray-600); line-height: 1.75;
+      margin-bottom: 28px;
+    }
+    .testi-author { display: flex; align-items: center; gap: 14px; }
+    .testi-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: .9rem; font-weight: 700; color: var(--gold);
+    }
+    .testi-name { font-size: .92rem; font-weight: 600; color: var(--navy); }
+    .testi-role { font-size: .78rem; color: var(--gray-400); }
+    .testi-stars { color: var(--gold); font-size: .8rem; letter-spacing: 2px; margin-bottom: 16px; }
+
+    /* ─── Contact ────────────────────────────────────────────────── */
+    #contact {
+      padding: 120px 0;
+      background: var(--navy);
+      position: relative; overflow: hidden;
+    }
+    .contact-bg {
+      position: absolute; inset: 0; opacity: .03;
+      background-image:
+        linear-gradient(rgba(184,146,58,1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(184,146,58,1) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+    .contact-inner {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start;
+    }
+    .contact-text .section-title { color: var(--white); }
+    .contact-text .section-sub { color: rgba(255,255,255,.5); }
+    .contact-details { margin-top: 44px; display: flex; flex-direction: column; gap: 24px; }
+    .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+    .contact-icon {
+      width: 44px; height: 44px; border-radius: var(--radius-sm);
+      background: rgba(184,146,58,.12); border: 1px solid rgba(184,146,58,.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+    .contact-item-label { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 4px; }
+    .contact-item-value { font-size: .95rem; color: rgba(255,255,255,.8); font-weight: 500; }
+    .contact-form {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      backdrop-filter: blur(20px);
+    }
+    .contact-form-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; font-weight: 600; color: var(--white);
+      margin-bottom: 8px;
+    }
+    .contact-form-sub { font-size: .88rem; color: rgba(255,255,255,.4); margin-bottom: 32px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    /* ─── Footer ─────────────────────────────────────────────────── */
+    footer {
+      background: #060d1c;
+      border-top: 1px solid rgba(184,146,58,.12);
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 64px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      margin-bottom: 32px;
+    }
+    .footer-brand .nav-logo { margin-bottom: 16px; display: inline-flex; }
+    .footer-brand p { font-size: .88rem; color: rgba(255,255,255,.35); line-height: 1.75; max-width: 320px; }
+    .footer-col-title {
+      font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--gold); font-weight: 600; margin-bottom: 20px;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 12px; }
+    .footer-links a { font-size: .88rem; color: rgba(255,255,255,.4); transition: var(--transition); }
+    .footer-links a:hover { color: var(--gold-light); padding-left: 6px; }
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-copy { font-size: .8rem; color: rgba(255,255,255,.25); }
+    .footer-disc { font-size: .75rem; color: rgba(255,255,255,.2); max-width: 480px; text-align: right; line-height: 1.6; }
+    .footer-social { display: flex; gap: 12px; }
+    .social-btn {
+      width: 36px; height: 36px; border-radius: var(--radius-sm);
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem; color: rgba(255,255,255,.4);
+      transition: var(--transition);
+    }
+    .social-btn:hover { background: rgba(184,146,58,.15); border-color: rgba(184,146,58,.3); color: var(--gold); }
+
+    /* ─── Scroll to top ──────────────────────────────────────────── */
+    #scrollTop {
+      position: fixed; bottom: 32px; right: 32px; z-index: 900;
+      width: 44px; height: 44px; border-radius: var(--radius-sm);
+      background: var(--gold); color: var(--navy);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; cursor: pointer;
+      box-shadow: 0 4px 16px rgba(184,146,58,.4);
+      opacity: 0; transform: translateY(16px);
+      transition: var(--transition); pointer-events: none;
+    }
+    #scrollTop.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    #scrollTop:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(184,146,58,.5); }
+
+    /* ─── Mobile Nav ─────────────────────────────────────────────── */
+    .mobile-menu {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 998;
+      background: var(--navy);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 32px;
+      opacity: 0; pointer-events: none; transition: var(--transition);
+    }
+    .mobile-menu.open { opacity: 1; pointer-events: auto; }
+    .mobile-menu a {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem; font-weight: 500; color: rgba(255,255,255,.7);
+      transition: var(--transition);
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-close {
+      position: absolute; top: 28px; right: 32px;
+      background: none; border: none; cursor: pointer;
+      font-size: 1.4rem; color: rgba(255,255,255,.5);
+    }
+
+    /* ─── Animations ─────────────────────────────────────────────── */
+    [data-aos] { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+    [data-aos].aos-animate { opacity: 1; transform: none; }
+    [data-aos="fade-right"] { transform: translateX(-24px); }
+    [data-aos="fade-right"].aos-animate { transform: none; }
+    [data-aos="fade-left"] { transform: translateX(24px); }
+    [data-aos="fade-left"].aos-animate { transform: none; }
+
+    /* ─── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .hero-content { grid-template-columns: 1fr; }
+      .hero-card { display: none; }
+      .hero-stats { gap: 32px; }
+      .about-grid, .why-grid, .courts-inner, .contact-inner, .footer-grid { grid-template-columns: 1fr; gap: 48px; }
+      .practice-grid, .testi-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-accent-card { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .container { padding: 0 20px; }
+      .practice-grid, .testi-grid { grid-template-columns: 1fr; }
+      .hero-content { padding: 120px 0 80px; }
+      .hero-stats { flex-wrap: wrap; gap: 24px; }
+      #navbar .nav-inner { padding: 18px 20px; }
+      #navbar.scrolled .nav-inner { padding: 12px 20px; }
+      .contact-form { padding: 28px; }
+      .footer-grid { gap: 36px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-disc { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── Navbar ──────────────────────────────────────────────────── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="logo-main">P. Manikannan</span>
+      <span class="logo-sub">Advocate & Legal Counsel</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#practice">Practice Areas</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#courts">Jurisdictions</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact" class="nav-cta">Consult Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#practice" class="mobile-link">Practice Areas</a>
+  <a href="#why" class="mobile-link">Why Us</a>
+  <a href="#courts" class="mobile-link">Jurisdictions</a>
+  <a href="#testimonials" class="mobile-link">Testimonials</a>
+  <a href="#contact" class="mobile-link" style="color:var(--gold)">Consult Now →</a>
+</div>
+
+<!-- ─── Hero ─────────────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-badge">High Court of Madras · Chennai, Tamil Nadu</div>
+        <h1 class="hero-headline">
+          Justice Delivered<br />With <em>Precision</em><br />& Purpose
+        </h1>
+        <p class="hero-sub">
+          Advocate P. Manikannan brings seasoned expertise across Civil, Criminal,
+          Writ, and Service Law — advocating relentlessly for your rights at the
+          High Court of Madras and beyond.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Schedule Consultation →</a>
+          <a href="#practice" class="btn btn-outline">Explore Practice Areas</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">15+</span>
+            <span class="stat-label">Years of Practice</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">500+</span>
+            <span class="stat-label">Cases Handled</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">5</span>
+            <span class="stat-label">Practice Areas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">HC</span>
+            <span class="stat-label">Madras High Court</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Consultation Card -->
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <div class="hero-card-icon">⚖️</div>
+          <div>
+            <div class="hero-card-title">Free Initial Consultation</div>
+            <div class="hero-card-sub">Typically responds within 24 hours</div>
+          </div>
+        </div>
+        <form class="hero-card-form" onsubmit="handleHeroForm(event)">
+          <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div class="form-field">
+              <label>First Name</label>
+              <input type="text" placeholder="Arjun" required />
+            </div>
+            <div class="form-field">
+              <label>Last Name</label>
+              <input type="text" placeholder="Kumar" required />
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+91 98765 43210" required />
+          </div>
+          <div class="form-field">
+            <label>Area of Concern</label>
+            <select required>
+              <option value="" disabled selected>Select a practice area</option>
+              <option>Civil Litigation</option>
+              <option>Criminal Law</option>
+              <option>Writ Petitions</option>
+              <option>Service & Employment</option>
+              <option>Family Law</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Brief Description</label>
+            <textarea placeholder="Briefly describe your legal matter..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Request Consultation</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Marquee ───────────────────────────────────────────────────── -->
+<div class="marquee-bar">
+  <div class="marquee-track" id="marqueeTrack">
+    <div class="marquee-item"><span>⚖</span> High Court of Madras</div>
+    <div class="marquee-item"><span>✦</span> Civil Litigation</div>
+    <div class="marquee-item"><span>⚖</span> Criminal Law</div>
+    <div class="marquee-item"><span>✦</span> Writ Petitions</div>
+    <div class="marquee-item"><span>⚖</span> Service &amp; Employment</div>
+    <div class="marquee-item"><span>✦</span> Family Law</div>
+    <div class="marquee-item"><span>⚖</span> City Civil Court, Chennai</div>
+    <div class="marquee-item"><span>✦</span> Property Disputes</div>
+    <div class="marquee-item"><span>⚖</span> Pension Claims</div>
+    <div class="marquee-item"><span>✦</span> Industrial Disputes</div>
+    <!-- duplicate for seamless loop -->
+    <div class="marquee-item"><span>⚖</span> High Court of Madras</div>
+    <div class="marquee-item"><span>✦</span> Civil Litigation</div>
+    <div class="marquee-item"><span>⚖</span> Criminal Law</div>
+    <div class="marquee-item"><span>✦</span> Writ Petitions</div>
+    <div class="marquee-item"><span>⚖</span> Service &amp; Employment</div>
+    <div class="marquee-item"><span>✦</span> Family Law</div>
+    <div class="marquee-item"><span>⚖</span> City Civil Court, Chennai</div>
+    <div class="marquee-item"><span>✦</span> Property Disputes</div>
+    <div class="marquee-item"><span>⚖</span> Pension Claims</div>
+    <div class="marquee-item"><span>✦</span> Industrial Disputes</div>
+  </div>
+</div>
+
+<!-- ─── About ─────────────────────────────────────────────────────── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual" data-aos="fade-right">
+        <div class="about-corner-deco tl">
+          <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2 L54 2 L2 54 Z" stroke="#b8923a" stroke-width="1" fill="none" opacity=".4"/>
+            <rect x="2" y="2" width="8" height="8" fill="#b8923a" opacity=".6"/>
+          </svg>
+        </div>
+        <div class="about-img-frame">
+          <div class="about-img-inner">
+            <span class="about-initials">PM</span>
+            <div class="about-name-plate">Advocate<br/>P. Manikannan</div>
+            <div class="about-court-badge">⚖ High Court of Madras</div>
+          </div>
+        </div>
+        <div class="about-corner-deco br">
+          <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M54 54 L2 54 L54 2 Z" stroke="#b8923a" stroke-width="1" fill="none" opacity=".4"/>
+            <rect x="46" y="46" width="8" height="8" fill="#b8923a" opacity=".6"/>
+          </svg>
+        </div>
+        <div class="about-accent-card">
+          <div class="about-accent-num">HC</div>
+          <div class="about-accent-lbl">Madras High Court<br/>Primary Court</div>
+        </div>
+      </div>
+
+      <div class="about-text" data-aos="fade-left">
+        <div class="section-label">About the Advocate</div>
+        <h2 class="section-title">A Legacy of <em>Trusted</em><br/>Legal Advocacy</h2>
+        <div class="divider-gold"></div>
+        <p>
+          Advocate P. Manikannan is a distinguished legal professional primarily
+          practicing at the High Court of Madras and various civil courts across
+          Chennai, Tamil Nadu. His practice is defined by rigorous legal scholarship,
+          unwavering ethical standards, and a genuine commitment to every client's cause.
+        </p>
+        <p>
+          With extensive experience across civil, criminal, and service-related matters,
+          he has built a reputation for delivering strategic, result-oriented legal
+          representation. His track record includes successful writ petitions against
+          government bodies, civil revision cases, and complex family court matters.
+        </p>
+        <p>
+          He is documented in official lawyer profiles on eCourtsIndia and Indian Kanoon,
+          reflecting an active and transparent professional career in Tamil Nadu's
+          judicial ecosystem.
+        </p>
+        <div class="about-quals">
+          <span class="qual-tag">High Court of Madras</span>
+          <span class="qual-tag">City Civil Court, Chennai</span>
+          <span class="qual-tag">District Courts, Tamil Nadu</span>
+          <span class="qual-tag">Family Court, Chengalpattu</span>
+          <span class="qual-tag">eCourts India Registered</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Practice Areas ────────────────────────────────────────────── -->
+<section id="practice">
+  <div class="container">
+    <div class="practice-header" data-aos="fade-up">
+      <div class="section-label">What We Handle</div>
+      <h2 class="section-title">Areas of <em>Legal Practice</em></h2>
+      <p class="section-sub" style="margin:12px auto 0;text-align:center">
+        Comprehensive legal representation across the full spectrum of civil,
+        criminal, and administrative law in Tamil Nadu.
+      </p>
+    </div>
+
+    <div class="practice-grid">
+      <div class="practice-card" data-aos="fade-up" data-delay="0">
+        <div class="practice-icon">⚖️</div>
+        <h3 class="practice-name">Civil Litigation</h3>
+        <p class="practice-desc">
+          Expert representation in civil appeals, revision petitions, and property
+          disputes before the High Court of Madras and City Civil Court, Chennai.
+          Covers contract disputes, injunctions, and declaratory suits.
+        </p>
+        <a href="#contact" class="practice-link">Enquire Now →</a>
+      </div>
+
+      <div class="practice-card" data-aos="fade-up" data-delay="100">
+        <div class="practice-icon">📜</div>
+        <h3 class="practice-name">Writ Petitions</h3>
+        <p class="practice-desc">
+          Skilled in filing and arguing writ petitions under Article 226 before the
+          High Court of Madras, including matters against government bodies such as
+          the Chennai Metropolitan Water Supply and Sewerage Board.
+        </p>
+        <a href="#contact" class="practice-link">Enquire Now →</a>
+      </div>
+
+      <div class="practice-card" data-aos="fade-up" data-delay="200">
+        <div class="practice-icon">🔒</div>
+        <h3 class="practice-name">Criminal Law</h3>
+        <p class="practice-desc">
+          Experienced in criminal revision cases and miscellaneous applications,
+          including bail matters, quashing petitions, and appeals in criminal
+          proceedings across district and High Courts.
+        </p>
+        <a href="#contact" class="practice-link">Enquire Now →</a>
+      </div>
+
+      <div class="practice-card" data-aos="fade-up" data-delay="0">
+        <div class="practice-icon">🏛️</div>
+        <h3 class="practice-name">Service & Employment</h3>
+        <p class="practice-desc">
+          Handles pension claims including freedom fighter family pension,
+          industrial disputes, service matter litigations, and employment
+          related grievances before tribunals and High Court.
+        </p>
+        <a href="#contact" class="practice-link">Enquire Now →</a>
+      </div>
+
+      <div class="practice-card" data-aos="fade-up" data-delay="100">
+        <div class="practice-icon">👨‍👩‍👧</div>
+        <h3 class="practice-name">Family Law</h3>
+        <p class="practice-desc">
+          Sensitive handling of matrimonial revision petitions, divorce proceedings,
+          child custody disputes, and maintenance matters before the Family Court,
+          Chengalpattu and related jurisdictions.
+        </p>
+        <a href="#contact" class="practice-link">Enquire Now →</a>
+      </div>
+
+      <div class="practice-card" data-aos="fade-up" data-delay="200">
+        <div class="practice-icon">🏠</div>
+        <h3 class="practice-name">Property & Public Interest</h3>
+        <p class="practice-desc">
+          Representations in property disputes including title suits and
+          possession matters, alongside public interest petitions against
+          government bodies and regulatory authorities.
+        </p>
+        <a href="#contact" class="practice-link">Enquire Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Why Choose Us ─────────────────────────────────────────────── -->
+<section id="why">
+  <div class="why-bg-circle"></div>
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-text" data-aos="fade-right">
+        <div class="section-label">Why Choose Us</div>
+        <h2 class="section-title" style="color:var(--white)">
+          The Right Counsel<br/>Makes All the <em>Difference</em>
+        </h2>
+        <div class="divider-gold"></div>
+        <p class="section-sub">
+          When your case demands nothing less than excellence, Advocate
+          P. Manikannan brings the depth of knowledge, clarity of strategy,
+          and commitment that complex legal battles require.
+        </p>
+        <div class="why-features">
+          <div class="why-feature">
+            <div class="why-feature-icon">🎯</div>
+            <div>
+              <div class="why-feature-title">Strategic Legal Thinking</div>
+              <div class="why-feature-desc">Every case is approached with a meticulous, research-backed strategy tailored to your specific circumstances and desired outcome.</div>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">🤝</div>
+            <div>
+              <div class="why-feature-title">Client-Centered Approach</div>
+              <div class="why-feature-desc">Transparent communication throughout the process. You are kept informed at every stage — no surprises, no confusion.</div>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">📚</div>
+            <div>
+              <div class="why-feature-title">Deep Jurisprudential Knowledge</div>
+              <div class="why-feature-desc">Extensive knowledge of Tamil Nadu judicial systems, High Court procedures, and landmark precedents relevant to your matter.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-pillars" data-aos="fade-left">
+        <div class="pillar-card">
+          <div class="pillar-num">01</div>
+          <div class="pillar-title">Ethical Practice, Always</div>
+          <div class="pillar-desc">Unwavering commitment to professional ethics and integrity — the foundation of every client relationship and legal strategy pursued.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-num">02</div>
+          <div class="pillar-title">Court-Tested Experience</div>
+          <div class="pillar-desc">Documented active practice across High Court of Madras, City Civil Court, and District Courts — with a proven record on eCourtsIndia and Indian Kanoon.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-num">03</div>
+          <div class="pillar-title">Multi-Jurisdictional Reach</div>
+          <div class="pillar-desc">Representation from Madras High Court down to Family Court, Chengalpattu — comprehensive coverage across the Tamil Nadu judicial hierarchy.</div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-num">04</div>
+          <div class="pillar-title">Timely & Decisive Action</div>
+          <div class="pillar-desc">Legal matters move fast. Prompt filing, proactive follow-ups, and decisive courtroom advocacy ensure your interests are never left unguarded.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Courts & Jurisdictions ────────────────────────────────────── -->
+<section id="courts">
+  <div class="container">
+    <div class="courts-inner">
+      <div class="courts-text" data-aos="fade-right">
+        <div class="section-label">Jurisdictions</div>
+        <h2 class="section-title">Courts &<br/><em>Jurisdictions</em></h2>
+        <div class="divider-gold"></div>
+        <p>
+          Advocate P. Manikannan maintains an active practice across multiple
+          tiers of the Tamil Nadu judicial system, ensuring comprehensive legal
+          coverage for clients wherever their matter is filed.
+        </p>
+        <p>
+          His primary practice is at the High Court of Madras, one of India's
+          oldest and most prestigious High Courts, with supplementary appearances
+          at the City Civil Court, Chennai, and various district and family courts
+          across the region.
+        </p>
+        <a href="#contact" class="btn btn-primary" style="margin-top:24px">Schedule Consultation →</a>
+      </div>
+
+      <div class="courts-map" data-aos="fade-left">
+        <div class="court-list">
+          <div class="court-item">
+            <div class="court-dot"></div>
+            <div>
+              <div class="court-name">High Court of Madras</div>
+            </div>
+            <span class="court-type">Primary Court</span>
+          </div>
+          <div class="court-item">
+            <div class="court-dot secondary"></div>
+            <div>
+              <div class="court-name">City Civil Court, Chennai</div>
+            </div>
+            <span class="court-type">Civil</span>
+          </div>
+          <div class="court-item">
+            <div class="court-dot secondary"></div>
+            <div>
+              <div class="court-name">Family Court, Chengalpattu</div>
+            </div>
+            <span class="court-type">Family</span>
+          </div>
+          <div class="court-item">
+            <div class="court-dot secondary"></div>
+            <div>
+              <div class="court-name">District Courts, Tamil Nadu</div>
+            </div>
+            <span class="court-type">Regional</span>
+          </div>
+          <div class="court-item">
+            <div class="court-dot secondary"></div>
+            <div>
+              <div class="court-name">Industrial / Labour Tribunals</div>
+            </div>
+            <span class="court-type">Service</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Testimonials ──────────────────────────────────────────────── -->
+<section id="testimonials">
+  <div class="container">
+    <div class="testi-header" data-aos="fade-up">
+      <div class="section-label">Client Testimonials</div>
+      <h2 class="section-title">Trusted by <em>Clients</em><br/>Across Tamil Nadu</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card" data-aos="fade-up" data-delay="0">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">
+          Advocate Manikannan handled my writ petition against the Water Board
+          with exceptional precision. He knew every procedural nuance and argued
+          our case brilliantly. We got the relief we sought.
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">RK</div>
+          <div>
+            <div class="testi-name">Ramesh Kumar</div>
+            <div class="testi-role">Writ Petition Client, Chennai</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" data-aos="fade-up" data-delay="100">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">
+          My civil appeal had been stuck for years. Manikannan Sir took over
+          and within months had it listed and argued successfully. His knowledge
+          of Madras High Court procedures is second to none.
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">PS</div>
+          <div>
+            <div class="testi-name">Priya Sundaram</div>
+            <div class="testi-role">Civil Appeal Client, Chennai</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" data-aos="fade-up" data-delay="200">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">
+          The pension case for my late father's freedom fighter family pension
+          was extremely complex. Advocate Manikannan navigated every government
+          hurdle and secured the pension we were legally entitled to.
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">MV</div>
+          <div>
+            <div class="testi-name">Meenakshi Venkat</div>
+            <div class="testi-role">Service Law Client, Tamil Nadu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Contact ───────────────────────────────────────────────────── -->
+<section id="contact">
+  <div class="contact-bg"></div>
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-text" data-aos="fade-right">
+        <div class="section-label" style="color:var(--gold-light)">Get In Touch</div>
+        <h2 class="section-title" style="color:var(--white)">
+          Speak With<br/>an Advocate <em>Today</em>
+        </h2>
+        <div class="divider-gold"></div>
+        <p class="section-sub">
+          Every legal matter has a deadline. Reach out now for a confidential
+          consultation — your first step toward a resolution.
+        </p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-item-label">Office Location</div>
+              <div class="contact-item-value">High Court of Madras, Chennai — 600 104, Tamil Nadu</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-item-label">Phone / WhatsApp</div>
+              <div class="contact-item-value">+91 [Contact for Number]</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value">advocate.manikannan@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">⏰</div>
+            <div>
+              <div class="contact-item-label">Office Hours</div>
+              <div class="contact-item-value">Mon – Sat: 10:00 AM – 6:00 PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form" data-aos="fade-left">
+        <div class="contact-form-title">Send a Message</div>
+        <div class="contact-form-sub">We'll respond to your enquiry within 24 hours.</div>
+        <form onsubmit="handleContactForm(event)">
+          <div class="hero-card-form" style="display:flex;flex-direction:column;gap:16px">
+            <div class="form-row">
+              <div class="form-field">
+                <label>First Name</label>
+                <input type="text" placeholder="Your first name" required />
+              </div>
+              <div class="form-field">
+                <label>Last Name</label>
+                <input type="text" placeholder="Your last name" required />
+              </div>
+            </div>
+            <div class="form-field">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+91 98765 43210" required />
+            </div>
+            <div class="form-field">
+              <label>Email Address</label>
+              <input type="email" placeholder="you@example.com" />
+            </div>
+            <div class="form-field">
+              <label>Practice Area</label>
+              <select required>
+                <option value="" disabled selected>Select area</option>
+                <option>Civil Litigation</option>
+                <option>Criminal Law</option>
+                <option>Writ Petitions</option>
+                <option>Service & Employment</option>
+                <option>Family Law</option>
+                <option>Property & Public Interest</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label>Your Message</label>
+              <textarea style="height:110px" placeholder="Describe your legal matter briefly. All information is kept strictly confidential." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message →</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ────────────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <span class="logo-main">P. Manikannan</span>
+          <span class="logo-sub">Advocate & Legal Counsel</span>
+        </div>
+        <p>
+          Practicing at the High Court of Madras and civil courts across
+          Chennai, Tamil Nadu. Committed to ethical, effective legal
+          representation across civil, criminal, and service law.
+        </p>
+        <div class="footer-social" style="margin-top:20px">
+          <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-btn" aria-label="WhatsApp">W</a>
+          <a href="#" class="social-btn" aria-label="Phone">☎</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Practice Areas</div>
+        <ul class="footer-links">
+          <li><a href="#practice">Civil Litigation</a></li>
+          <li><a href="#practice">Writ Petitions</a></li>
+          <li><a href="#practice">Criminal Law</a></li>
+          <li><a href="#practice">Service & Employment</a></li>
+          <li><a href="#practice">Family Law</a></li>
+          <li><a href="#practice">Property & Public Interest</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#courts">Jurisdictions</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        © 2026 Advocate P. Manikannan. All rights reserved.
+      </div>
+      <div class="footer-disc">
+        <strong style="color:rgba(255,255,255,.35)">Disclaimer:</strong>
+        The information on this website is for general informational purposes only and
+        does not constitute legal advice. Viewing this site does not create an
+        advocate-client relationship.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top -->
+<div id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+
+<!-- ─── Scripts ────────────────────────────────────────────────────── -->
+<script>
+  /* ── Navbar scroll ── */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+    document.getElementById('scrollTop').classList.toggle('show', window.scrollY > 400);
+  });
+
+  /* ── Mobile menu ── */
+  const hamburger = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileClose = document.getElementById('mobileClose');
+  hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+  mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  document.querySelectorAll('.mobile-link').forEach(l => {
+    l.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+
+  /* ── Intersection Observer for AOS ── */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const delay = parseInt(el.dataset.delay || 0);
+        setTimeout(() => el.classList.add('aos-animate'), delay);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
+
+  /* ── Form handlers ── */
+  function handleHeroForm(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = '✓ Request Sent!';
+    btn.style.background = '#2a6b3c';
+    btn.style.color = '#fff';
+    setTimeout(() => {
+      btn.textContent = 'Request Consultation';
+      btn.style.background = '';
+      btn.style.color = '';
+      e.target.reset();
+    }, 3000);
+  }
+  function handleContactForm(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = '✓ Message Sent!';
+    btn.style.background = '#2a6b3c';
+    btn.style.color = '#fff';
+    setTimeout(() => {
+      btn.textContent = 'Send Message →';
+      btn.style.background = '';
+      btn.style.color = '';
+      e.target.reset();
+    }, 3000);
+  }
+
+  /* ── Smooth scroll for anchor links ── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
