@@ -790,6 +790,18 @@
     }
     a.hero-service-tag { text-decoration: none; cursor: pointer; }
     .practice-card { scroll-margin-top: 100px; }
+    .hero-service-group {
+      background: rgba(212,160,23,.06);
+      border: 1px solid rgba(212,160,23,.32);
+      border-radius: 12px;
+      padding: 10px 14px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .hero-service-group-label {
+      font-size: .65rem; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--gold); font-weight: 700;
+    }
+    .hero-service-sub-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
     /* ─── Laptop breakpoint (1280px) ────────────────────────────── */
     @media (max-width: 1280px) {
@@ -892,12 +904,17 @@
           <a href="#service-criminal" class="hero-service-tag"><span class="tag-dot"></span>Cheque Bounce (NI Act 138)</a>
           <a href="#service-matrimonial" class="hero-service-tag"><span class="tag-dot"></span>Matrimonial &amp; Divorce</a>
           <a href="#service-labour" class="hero-service-tag"><span class="tag-dot"></span>Labour &amp; Service Matters</a>
-          <a href="#service-writ" class="hero-service-tag"><span class="tag-dot"></span>Writ Petitions</a>
           <a href="#service-documentation" class="hero-service-tag"><span class="tag-dot"></span>Sale &amp; Partition Deed</a>
-          <a href="#service-documentation" class="hero-service-tag"><span class="tag-dot"></span>Affidavit &amp; Will</a>
-          <a href="#service-documentation" class="hero-service-tag"><span class="tag-dot"></span>Rental &amp; Construction Agreement</a>
-          <a href="#service-property" class="hero-service-tag"><span class="tag-dot"></span>Title Verification</a>
-          <a href="#service-property" class="hero-service-tag"><span class="tag-dot"></span>Power of Attorney (GPA / SPA)</a>
+          <a href="#service-property" class="hero-service-tag"><span class="tag-dot"></span>Legal Opinion</a>
+          <div class="hero-service-group">
+            <div class="hero-service-group-label">Legal Documentation</div>
+            <div class="hero-service-sub-tags">
+              <a href="#service-documentation" class="hero-service-tag"><span class="tag-dot"></span>Writ Petitions</a>
+              <a href="#service-documentation" class="hero-service-tag"><span class="tag-dot"></span>Affidavit &amp; Will</a>
+              <a href="#service-documentation" class="hero-service-tag"><span class="tag-dot"></span>Rental &amp; Construction Agreement</a>
+              <a href="#service-documentation" class="hero-service-tag"><span class="tag-dot"></span>Power of Attorney (GPA / SPA)</a>
+            </div>
+          </div>
           <a href="#service-debt" class="hero-service-tag"><span class="tag-dot"></span>DRT / DRAT / SARFAESI</a>
           <a href="#service-debt" class="hero-service-tag"><span class="tag-dot"></span>Rent Control Cases</a>
           <a href="#service-tribunals" class="hero-service-tag"><span class="tag-dot"></span>Motor Accident (MCOP)</a>
