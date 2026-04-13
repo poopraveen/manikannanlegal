@@ -12,26 +12,26 @@
     /* ─── Reset & Base ─────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --navy:      #09132b;
-      --navy-mid:  #0e1f47;
-      --navy-soft: #132558;
-      --gold:      #b8923a;
-      --gold-light:#d4aa5a;
-      --gold-pale: #f0e0b0;
-      --cream:     #faf8f3;
+      --navy:      #083776;
+      --navy-mid:  #0D4FA8;
+      --navy-soft: #1468CC;
+      --gold:      #D4A017;
+      --gold-light:#E8C040;
+      --gold-pale: #FFF3C0;
+      --cream:     #F4F8FF;
       --white:     #ffffff;
-      --gray-100:  #f5f4f0;
-      --gray-200:  #e8e4da;
-      --gray-400:  #9e9890;
-      --gray-600:  #6b6560;
-      --gray-800:  #2c2820;
-      --text:      #1a1714;
+      --gray-100:  #EEF4FB;
+      --gray-200:  #D8E6F5;
+      --gray-400:  #8BAAC8;
+      --gray-600:  #4A6A8A;
+      --gray-800:  #1A3050;
+      --text:      #0D2340;
       --radius-sm: 4px;
       --radius-md: 10px;
       --radius-lg: 20px;
-      --shadow-sm: 0 2px 8px rgba(9,19,43,.08);
-      --shadow-md: 0 8px 32px rgba(9,19,43,.12);
-      --shadow-lg: 0 20px 60px rgba(9,19,43,.18);
+      --shadow-sm: 0 2px 8px rgba(8,55,118,.10);
+      --shadow-md: 0 8px 32px rgba(8,55,118,.15);
+      --shadow-lg: 0 20px 60px rgba(8,55,118,.22);
       --transition: .35s cubic-bezier(.4,0,.2,1);
     }
     html { scroll-behavior: smooth; font-size: 16px; }
@@ -760,14 +760,13 @@
   <div class="nav-inner">
     <a href="#" class="nav-logo">
       <span class="logo-main">P. Manikannan</span>
-      <span class="logo-sub">Advocate & Legal Counsel</span>
+      <span class="logo-sub">Sri Ancholai · Advocate High Court</span>
     </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#practice">Practice Areas</a></li>
       <li><a href="#why">Why Us</a></li>
       <li><a href="#courts">Jurisdictions</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact" class="nav-cta">Consult Now</a></li>
     </ul>
     <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
@@ -783,7 +782,6 @@
   <a href="#practice" class="mobile-link">Practice Areas</a>
   <a href="#why" class="mobile-link">Why Us</a>
   <a href="#courts" class="mobile-link">Jurisdictions</a>
-  <a href="#testimonials" class="mobile-link">Testimonials</a>
   <a href="#contact" class="mobile-link" style="color:var(--gold)">Consult Now →</a>
 </div>
 
@@ -848,7 +846,7 @@
             <span class="stat-label">Cases Handled</span>
           </div>
           <div class="stat-item">
-            <span class="stat-num">11</span>
+            <span class="stat-num">10</span>
             <span class="stat-label">Practice Areas</span>
           </div>
           <div class="stat-item">
@@ -960,7 +958,7 @@
         <div class="about-img-frame">
           <div class="about-img-inner">
             <span class="about-initials">PM</span>
-            <div class="about-name-plate">Advocate<br/>Poongavanan Manikannan</div>
+            <div class="about-name-plate">Advocate<br/>P. Manikannan<br/><span style="font-size:.9rem;color:var(--gold-light);font-style:normal;">B.Sc., M.L.</span></div>
             <div class="about-court-badge">⚖ High Court of Madras</div>
           </div>
         </div>
@@ -1072,25 +1070,18 @@
 
       <div id="service-documentation" class="practice-card" data-aos="fade-up" data-delay="100">
         <div class="practice-icon">📝</div>
-        <h3 class="practice-name">Legal Documentation</h3>
+        <h3 class="practice-name">Legal Documentation &amp; Property</h3>
         <p class="practice-desc">
-          Need a legal document drafted or verified? Every document is prepared
-          carefully to protect your interests. Covers Sale Deeds, Partition Deeds,
-          Index Correction (MOD), Deposit of Title Deeds, Declaration Deeds,
-          Affidavits, Wills, Indemnity Bonds, Construction Agreements, and
-          Rental Agreements.
-        </p>
-        <a href="#contact" class="practice-link">Enquire Now →</a>
-      </div>
-
-      <div id="service-property" class="practice-card" data-aos="fade-up" data-delay="200">
-        <div class="practice-icon">🏠</div>
-        <h3 class="practice-name">Property &amp; Power of Attorney</h3>
-        <p class="practice-desc">
-          Buying or selling property? Want to authorise someone to act on your behalf?
-          Get a thorough check done before you sign anything. Covers Title Verification,
-          Legal Opinion on property, General Power of Attorney (GPA), Special Power of
-          Attorney (SPA), and Cancellation of GPA.
+          Need any legal document drafted, verified, or a property checked before you
+          sign? Every document is prepared carefully to protect your interests.
+          <br/><br/>
+          <strong>Documents:</strong> Sale Deed, Partition Deed, Index Correction (MOD),
+          Deposit of Title Deeds, Declaration Deed, Affidavit, Will, Indemnity Bond,
+          Construction Agreement, Rental Agreement.
+          <br/><br/>
+          <strong>Property &amp; POA:</strong> Title Verification, Legal Opinion on
+          Property, General Power of Attorney (GPA), Special Power of Attorney (SPA),
+          Cancellation of GPA.
         </p>
         <a href="#contact" class="practice-link">Enquire Now →</a>
       </div>
@@ -1283,75 +1274,28 @@
           </div>
           <div class="court-item">
             <div class="court-dot secondary"></div>
-            <div><div class="court-name">Family Court, Chengalpattu</div></div>
+            <div><div class="court-name">Family Court</div></div>
             <span class="court-type">Family</span>
+          </div>
+          <div class="court-item">
+            <div class="court-dot secondary"></div>
+            <div><div class="court-name">Judicial Magistrate Court (JM)</div></div>
+            <span class="court-type">Criminal</span>
+          </div>
+          <div class="court-item">
+            <div class="court-dot secondary"></div>
+            <div><div class="court-name">Metropolitan Magistrate Court (MM)</div></div>
+            <span class="court-type">Criminal</span>
+          </div>
+          <div class="court-item">
+            <div class="court-dot secondary"></div>
+            <div><div class="court-name">Armed Forces Tribunal</div></div>
+            <span class="court-type">Armed Forces</span>
           </div>
           <div class="court-item">
             <div class="court-dot secondary"></div>
             <div><div class="court-name">District Courts, Tamil Nadu</div></div>
             <span class="court-type">Regional</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── Testimonials ──────────────────────────────────────────────── -->
-<section id="testimonials">
-  <div class="container">
-    <div class="testi-header" data-aos="fade-up">
-      <div class="section-label">Client Testimonials</div>
-      <h2 class="section-title">Trusted by <em>Clients</em><br/>Across Tamil Nadu</h2>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card" data-aos="fade-up" data-delay="0">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote">"</div>
-        <p class="testi-text">
-          Advocate Manikannan handled my writ petition against the Water Board
-          with exceptional precision. He knew every procedural nuance and argued
-          our case brilliantly. We got the relief we sought.
-        </p>
-        <div class="testi-author">
-          <div class="testi-avatar">RK</div>
-          <div>
-            <div class="testi-name">Ramesh Kumar</div>
-            <div class="testi-role">Writ Petition Client, Chennai</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testi-card" data-aos="fade-up" data-delay="100">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote">"</div>
-        <p class="testi-text">
-          My civil appeal had been stuck for years. Manikannan Sir took over
-          and within months had it listed and argued successfully. His knowledge
-          of Madras High Court procedures is second to none.
-        </p>
-        <div class="testi-author">
-          <div class="testi-avatar">PS</div>
-          <div>
-            <div class="testi-name">Priya Sundaram</div>
-            <div class="testi-role">Civil Appeal Client, Chennai</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testi-card" data-aos="fade-up" data-delay="200">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote">"</div>
-        <p class="testi-text">
-          The pension case for my late father's freedom fighter family pension
-          was extremely complex. Advocate Manikannan navigated every government
-          hurdle and secured the pension we were legally entitled to.
-        </p>
-        <div class="testi-author">
-          <div class="testi-avatar">MV</div>
-          <div>
-            <div class="testi-name">Meenakshi Venkat</div>
-            <div class="testi-role">Service Law Client, Tamil Nadu</div>
           </div>
         </div>
       </div>
@@ -1376,10 +1320,17 @@
         </p>
         <div class="contact-details">
           <div class="contact-item">
-            <div class="contact-icon">📍</div>
+            <div class="contact-icon">🏢</div>
             <div>
-              <div class="contact-item-label">Office Location</div>
-              <div class="contact-item-value">3/1, Patel Road, Perambur, Chennai — Tamil Nadu</div>
+              <div class="contact-item-label">Office Address</div>
+              <div class="contact-item-value">Emerald Complex, Room No.207,<br/>No.5, Sunkuraman Street, IInd Floor,<br/>Parrys, Chennai — 600 001</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🏠</div>
+            <div>
+              <div class="contact-item-label">Residence</div>
+              <div class="contact-item-value">#143/53, Patel Road,<br/>Perambur, Chennai — 600 011</div>
             </div>
           </div>
           <div class="contact-item">
@@ -1393,7 +1344,7 @@
             <div class="contact-icon">✉️</div>
             <div>
               <div class="contact-item-label">Email</div>
-              <div class="contact-item-value">advocate.manikannan@gmail.com</div>
+              <div class="contact-item-value">anchalailaw@gmail.com</div>
             </div>
           </div>
           <div class="contact-item">
@@ -1463,14 +1414,14 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="nav-logo">
-          <span class="logo-main">Poongavanan Manikannan</span>
-          <span class="logo-sub">Advocate & Legal Counsel</span>
+          <span class="logo-main">P. Manikannan, B.Sc., M.L.</span>
+          <span class="logo-sub">Sri Ancholai · Advocate High Court</span>
         </div>
         <p>
           25+ years of practice at the High Court of Madras and civil courts
-          across Chennai, Tamil Nadu. Committed to ethical, effective legal
-          representation across civil, criminal, property, matrimonial, and
-          tribunal matters.
+          across Chennai, Tamil Nadu. Office at Emerald Complex, Parrys, Chennai.
+          Committed to ethical, effective legal representation across civil,
+          criminal, property, matrimonial, and tribunal matters.
         </p>
         <div class="footer-social" style="margin-top:20px">
           <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
@@ -1497,9 +1448,9 @@
         <div class="footer-col-title">Quick Links</div>
         <ul class="footer-links">
           <li><a href="#about">About</a></li>
+          <li><a href="#practice">Services</a></li>
           <li><a href="#why">Why Choose Us</a></li>
           <li><a href="#courts">Jurisdictions</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
       </div>
@@ -1507,7 +1458,7 @@
 
     <div class="footer-bottom">
       <div class="footer-copy">
-        © 2026 Advocate Poongavanan Manikannan. All rights reserved.
+        © 2026 P. Manikannan, B.Sc., M.L. — Sri Ancholai. All rights reserved.
       </div>
       <div class="footer-disc">
         <strong style="color:rgba(255,255,255,.35)">Disclaimer:</strong>
