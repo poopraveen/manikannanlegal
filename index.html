@@ -1508,32 +1508,85 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
 
-  /* ── Form handlers ── */
-  function handleHeroForm(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = '✓ Request Sent!';
-    btn.style.background = '#2a6b3c';
-    btn.style.color = '#fff';
-    setTimeout(() => {
-      btn.textContent = 'Request Consultation';
-      btn.style.background = '';
-      btn.style.color = '';
-      e.target.reset();
-    }, 3000);
+  /* ── Telegram Config ── */
+  const TG_TOKEN = '8688993793:AAFoTciMA8hSBIrRPM1jkGyIu_ZzdX9d6zs';
+  const TG_CHAT  = '8563634578';
+
+  async function sendToTelegram(text) {
+    const url = `https://api.telegram.org/bot${TG_TOKEN}/sendMessage`;
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: TG_CHAT, text, parse_mode: 'HTML' })
+    });
+    if (!res.ok) throw new Error('Telegram error');
   }
-  function handleContactForm(e) {
+
+  function setBtn(btn, state, label) {
+    btn.disabled = state === 'loading';
+    btn.textContent = label;
+    btn.style.background = state === 'success' ? '#1a6b35'
+                         : state === 'error'   ? '#8b2020'
+                         : '';
+    btn.style.color = (state === 'success' || state === 'error') ? '#fff' : '';
+  }
+
+  /* ── Hero Form ── */
+  async function handleHeroForm(e) {
     e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = '✓ Message Sent!';
-    btn.style.background = '#2a6b3c';
-    btn.style.color = '#fff';
-    setTimeout(() => {
-      btn.textContent = 'Send Message →';
-      btn.style.background = '';
-      btn.style.color = '';
-      e.target.reset();
-    }, 3000);
+    const f = e.target;
+    const btn = f.querySelector('.form-submit');
+    const fields = f.querySelectorAll('input, select, textarea');
+    const [firstName, lastName, phone, area, desc] = [...fields].map(el => el.value.trim());
+
+    setBtn(btn, 'loading', 'Sending...');
+    const msg =
+`📬 <b>New Consultation Request</b>
+━━━━━━━━━━━━━━━━━━
+👤 <b>Name:</b> ${firstName} ${lastName}
+📞 <b>Phone:</b> ${phone}
+⚖️ <b>Area:</b> ${area || '—'}
+📝 <b>Details:</b> ${desc || '—'}
+━━━━━━━━━━━━━━━━━━
+<i>Submitted via Website Hero Form</i>`;
+    try {
+      await sendToTelegram(msg);
+      setBtn(btn, 'success', '✓ Request Sent!');
+      setTimeout(() => { setBtn(btn, '', 'Request Consultation'); f.reset(); }, 3500);
+    } catch {
+      setBtn(btn, 'error', '✗ Failed — Try Again');
+      setTimeout(() => setBtn(btn, '', 'Request Consultation'), 3500);
+    }
+  }
+
+  /* ── Contact Form ── */
+  async function handleContactForm(e) {
+    e.preventDefault();
+    const f = e.target;
+    const btn = f.querySelector('.form-submit');
+    const fields = f.querySelectorAll('input, select, textarea');
+    const [firstName, lastName, phone, email, area, message] = [...fields].map(el => el.value.trim());
+
+    setBtn(btn, 'loading', 'Sending...');
+    const msg =
+`📩 <b>New Contact Form Message</b>
+━━━━━━━━━━━━━━━━━━
+👤 <b>Name:</b> ${firstName} ${lastName}
+📞 <b>Phone:</b> ${phone}
+✉️ <b>Email:</b> ${email || '—'}
+⚖️ <b>Area:</b> ${area || '—'}
+💬 <b>Message:</b>
+${message || '—'}
+━━━━━━━━━━━━━━━━━━
+<i>Submitted via Website Contact Form</i>`;
+    try {
+      await sendToTelegram(msg);
+      setBtn(btn, 'success', '✓ Message Sent!');
+      setTimeout(() => { setBtn(btn, '', 'Send Message →'); f.reset(); }, 3500);
+    } catch {
+      setBtn(btn, 'error', '✗ Failed — Try Again');
+      setTimeout(() => setBtn(btn, '', 'Send Message →'), 3500);
+    }
   }
 
   /* ── Smooth scroll for anchor links ── */
