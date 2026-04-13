@@ -326,11 +326,91 @@
     .about-img-inner {
       text-align: center; padding: 40px;
     }
+    /* Photo frame — actual image fills frame, fallback shown if missing */
+    .about-img-frame img.profile-photo {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top center;
+      display: block;
+    }
+    .photo-placeholder-icon { font-size: 3rem; opacity: .4; margin-bottom: 8px; }
+    .photo-placeholder-hint {
+      font-size: .72rem; letter-spacing: .08em;
+      color: rgba(255,255,255,.3); margin-top: 6px;
+      border: 1px dashed rgba(255,255,255,.15);
+      padding: 4px 12px; border-radius: 100px;
+    }
     .about-initials {
       font-family: 'Playfair Display', serif;
       font-size: 6rem; font-weight: 700;
       color: rgba(184,146,58,.25); line-height: 1;
       display: block;
+    }
+
+    /* ─── Team Section ──────────────────────────────────────────── */
+    #team { padding: 100px 0; background: var(--gray-100); }
+    .team-header { text-align: center; margin-bottom: 56px; }
+    .team-header .section-label { justify-content: center; }
+    .team-header .section-label::before { display: none; }
+    .team-header .section-label::after { content: ''; display: block; width: 28px; height: 1px; background: var(--gold); }
+    .team-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 40px; max-width: 760px; margin: 0 auto;
+    }
+    .team-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      text-align: center;
+    }
+    .team-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .team-photo-wrap {
+      width: 100%; aspect-ratio: 3/4;
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-soft) 100%);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .team-photo-wrap img.profile-photo {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top center;
+      display: block;
+    }
+    .team-photo-placeholder {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 8px;
+      padding: 24px;
+    }
+    .team-photo-placeholder .placeholder-icon {
+      font-size: 4rem; opacity: .35;
+    }
+    .team-photo-placeholder .placeholder-label {
+      font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,.35);
+      border: 1px dashed rgba(255,255,255,.2);
+      padding: 5px 14px; border-radius: 100px;
+    }
+    .team-info { padding: 24px 20px 28px; }
+    .team-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; font-weight: 600; color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .team-quals { font-size: .8rem; color: var(--gold); font-weight: 600; margin-bottom: 8px; }
+    .team-role {
+      font-size: .82rem; color: var(--gray-600); line-height: 1.55;
+    }
+    .team-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--gray-100); border-radius: 100px;
+      padding: 5px 14px; margin-top: 12px;
+      font-size: .7rem; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--navy);
+    }
+    @media (max-width: 640px) {
+      .team-grid { grid-template-columns: 1fr; max-width: 360px; }
     }
     .about-name-plate {
       font-family: 'Playfair Display', serif;
@@ -958,10 +1038,15 @@
           </svg>
         </div>
         <div class="about-img-frame">
+          <img src="images/advocate.jpg" alt="Advocate P. Manikannan"
+               class="profile-photo"
+               onload="this.nextElementSibling.style.display='none'"
+               onerror="this.style.display='none'" />
           <div class="about-img-inner">
-            <span class="about-initials">PM</span>
+            <div class="photo-placeholder-icon">📷</div>
             <div class="about-name-plate">Advocate<br/>P. Manikannan<br/><span style="font-size:.9rem;color:var(--gold-light);font-style:normal;">B.Sc., M.L.</span></div>
             <div class="about-court-badge">⚖ High Court of Madras</div>
+            <div class="photo-placeholder-hint">Photo Placeholder</div>
           </div>
         </div>
         <div class="about-corner-deco br">
@@ -1005,6 +1090,65 @@
           <span class="qual-tag">eCourts India Registered</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Team ──────────────────────────────────────────────────────── -->
+<section id="team">
+  <div class="container">
+    <div class="team-header" data-aos="fade-up">
+      <div class="section-label">Our Team</div>
+      <h2 class="section-title">The People Behind<br/>Your <em>Legal Matter</em></h2>
+    </div>
+    <div class="team-grid">
+
+      <!-- Advocate -->
+      <div class="team-card" data-aos="fade-up" data-delay="0">
+        <div class="team-photo-wrap">
+          <img src="images/advocate.jpg" alt="Advocate P. Manikannan"
+               class="profile-photo"
+               onload="this.nextElementSibling.style.display='none'"
+               onerror="this.style.display='none'" />
+          <div class="team-photo-placeholder">
+            <div class="placeholder-icon">📷</div>
+            <div class="placeholder-label">Upload Advocate Photo</div>
+          </div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">P. Manikannan</div>
+          <div class="team-quals">B.Sc., M.L.</div>
+          <div class="team-role">
+            Senior Advocate with 25+ years of practice at the High Court of Madras.
+            Handles the full spectrum of civil, criminal, property, and tribunal matters.
+          </div>
+          <div class="team-badge">⚖ Advocate High Court</div>
+        </div>
+      </div>
+
+      <!-- Assistant -->
+      <div class="team-card" data-aos="fade-up" data-delay="100">
+        <div class="team-photo-wrap">
+          <img src="images/assistant.jpg" alt="Assistant"
+               class="profile-photo"
+               onload="this.nextElementSibling.style.display='none'"
+               onerror="this.style.display='none'" />
+          <div class="team-photo-placeholder">
+            <div class="placeholder-icon">📷</div>
+            <div class="placeholder-label">Upload Assistant Photo</div>
+          </div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Assistant Name</div>
+          <div class="team-quals">Designation</div>
+          <div class="team-role">
+            Supports case preparation, client coordination, and documentation.
+            Your first point of contact for scheduling and enquiries.
+          </div>
+          <div class="team-badge">🏛 Sri Ancholai</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
