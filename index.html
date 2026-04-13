@@ -507,6 +507,8 @@
     .court-item:hover { border-color: var(--gold); box-shadow: var(--shadow-sm); }
     .court-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
     .court-dot.secondary { background: var(--gray-400); }
+    .court-sub-list { margin-top: 6px; display: flex; flex-direction: column; gap: 3px; }
+    .court-sub-item { font-size: .78rem; color: var(--gray-400); padding-left: 4px; }
     .court-name { font-size: .92rem; font-weight: 600; color: var(--navy); }
     .court-type { font-size: .78rem; color: var(--gray-400); margin-left: auto; letter-spacing: .04em; }
     .courts-text .section-sub { max-width: 100%; }
@@ -760,7 +762,7 @@
   <div class="nav-inner">
     <a href="#" class="nav-logo">
       <span class="logo-main">P. Manikannan</span>
-      <span class="logo-sub">Sri Ancholai · Advocate High Court</span>
+      <span class="logo-sub">Advocate High Court</span>
     </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
@@ -1279,12 +1281,13 @@
           </div>
           <div class="court-item">
             <div class="court-dot secondary"></div>
-            <div><div class="court-name">Judicial Magistrate Court (JM)</div></div>
-            <span class="court-type">Criminal</span>
-          </div>
-          <div class="court-item">
-            <div class="court-dot secondary"></div>
-            <div><div class="court-name">Metropolitan Magistrate Court (MM)</div></div>
+            <div>
+              <div class="court-name">Sessions Court</div>
+              <div class="court-sub-list">
+                <div class="court-sub-item">↳ Judicial Magistrate Court (JM)</div>
+                <div class="court-sub-item">↳ Metropolitan Magistrate Court (MM)</div>
+              </div>
+            </div>
             <span class="court-type">Criminal</span>
           </div>
           <div class="court-item">
