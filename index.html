@@ -706,6 +706,8 @@
       width: 5px; height: 5px; border-radius: 50%;
       background: var(--gold); flex-shrink: 0;
     }
+    a.hero-service-tag { text-decoration: none; cursor: pointer; }
+    .practice-card { scroll-margin-top: 100px; }
 
     /* ─── Laptop breakpoint (1280px) ────────────────────────────── */
     @media (max-width: 1280px) {
@@ -805,30 +807,31 @@
 
         <div class="hero-services-label">Services We Handle</div>
         <div class="hero-service-tags">
-          <span class="hero-service-tag"><span class="tag-dot"></span>Civil Suits &amp; Appeals</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Criminal Cases</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Cheque Bounce (NI Act 138)</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Matrimonial &amp; Divorce</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Labour &amp; Service Matters</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Writ Petitions</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Sale &amp; Partition Deed</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Affidavit &amp; Will</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Rental &amp; Construction Agreement</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Title Verification</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Power of Attorney (GPA / SPA)</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>DRT / DRAT / SARFAESI</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Rent Control Cases</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Motor Accident (MCOP)</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Railway Claims Tribunal</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Central Administrative Tribunal</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Green Tribunal</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Senior Citizen Protection</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>HR &amp; CE Matters</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Probate of Will</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Letter of Administration</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Gazette Publication</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Land Acquisition Cases</span>
-          <span class="hero-service-tag"><span class="tag-dot"></span>Arbitration</span>
+          <a href="#service-civil" class="hero-service-tag"><span class="tag-dot"></span>Civil Suits &amp; Appeals</a>
+          <a href="#service-criminal" class="hero-service-tag"><span class="tag-dot"></span>Criminal Cases</a>
+          <a href="#service-criminal" class="hero-service-tag"><span class="tag-dot"></span>Cheque Bounce (NI Act 138)</a>
+          <a href="#service-matrimonial" class="hero-service-tag"><span class="tag-dot"></span>Matrimonial &amp; Divorce</a>
+          <a href="#service-labour" class="hero-service-tag"><span class="tag-dot"></span>Labour &amp; Service Matters</a>
+          <a href="#service-writ" class="hero-service-tag"><span class="tag-dot"></span>Writ Petitions</a>
+          <a href="#service-documentation" class="hero-service-tag"><span class="tag-dot"></span>Sale &amp; Partition Deed</a>
+          <a href="#service-documentation" class="hero-service-tag"><span class="tag-dot"></span>Affidavit &amp; Will</a>
+          <a href="#service-documentation" class="hero-service-tag"><span class="tag-dot"></span>Rental &amp; Construction Agreement</a>
+          <a href="#service-property" class="hero-service-tag"><span class="tag-dot"></span>Title Verification</a>
+          <a href="#service-property" class="hero-service-tag"><span class="tag-dot"></span>Power of Attorney (GPA / SPA)</a>
+          <a href="#service-debt" class="hero-service-tag"><span class="tag-dot"></span>DRT / DRAT / SARFAESI</a>
+          <a href="#service-debt" class="hero-service-tag"><span class="tag-dot"></span>Rent Control Cases</a>
+          <a href="#service-tribunals" class="hero-service-tag"><span class="tag-dot"></span>Motor Accident (MCOP)</a>
+          <a href="#service-tribunals" class="hero-service-tag"><span class="tag-dot"></span>Railway Claims Tribunal</a>
+          <a href="#service-labour" class="hero-service-tag"><span class="tag-dot"></span>Central Administrative Tribunal</a>
+          <a href="#service-tribunals" class="hero-service-tag"><span class="tag-dot"></span>Green Tribunal</a>
+          <a href="#service-tribunals" class="hero-service-tag"><span class="tag-dot"></span>Senior Citizen Protection</a>
+          <a href="#service-labour" class="hero-service-tag"><span class="tag-dot"></span>HR &amp; CE Matters</a>
+          <a href="#service-writ" class="hero-service-tag"><span class="tag-dot"></span>Probate of Will</a>
+          <a href="#service-writ" class="hero-service-tag"><span class="tag-dot"></span>Letter of Administration</a>
+          <a href="#service-writ" class="hero-service-tag"><span class="tag-dot"></span>Gazette Publication</a>
+          <a href="#service-civil" class="hero-service-tag"><span class="tag-dot"></span>Land Acquisition Cases</a>
+          <a href="#service-insolvency" class="hero-service-tag"><span class="tag-dot"></span>Insolvency</a>
+          <a href="#service-arbitration" class="hero-service-tag"><span class="tag-dot"></span>Arbitration</a>
         </div>
 
         <div class="hero-actions">
@@ -845,7 +848,7 @@
             <span class="stat-label">Cases Handled</span>
           </div>
           <div class="stat-item">
-            <span class="stat-num">9</span>
+            <span class="stat-num">11</span>
             <span class="stat-label">Practice Areas</span>
           </div>
           <div class="stat-item">
@@ -892,6 +895,8 @@
               <option>Debt Recovery (DRT / SARFAESI)</option>
               <option>Tribunals &amp; Accident Cases (MCOP)</option>
               <option>Writ, Probate &amp; Original Side</option>
+              <option>Insolvency</option>
+              <option>Arbitration</option>
               <option>Other</option>
             </select>
           </div>
@@ -1017,19 +1022,19 @@
     </div>
 
     <div class="practice-grid">
-      <div class="practice-card" data-aos="fade-up" data-delay="0">
+      <div id="service-civil" class="practice-card" data-aos="fade-up" data-delay="0">
         <div class="practice-icon">⚖️</div>
         <h3 class="practice-name">Civil Litigation &amp; Appeals</h3>
         <p class="practice-desc">
           If someone has filed a case against you — or you need to take someone to court
           over money, property, or a broken agreement — this covers you. Handles Civil
           Suits, Appeal Suits (A.S.), Second Appeals (S.A.), Civil Revision Petitions
-          (C.R.P.), Land Acquisition disputes, and Arbitration proceedings.
+          (C.R.P.), and Land Acquisition disputes.
         </p>
         <a href="#contact" class="practice-link">Enquire Now →</a>
       </div>
 
-      <div class="practice-card" data-aos="fade-up" data-delay="100">
+      <div id="service-criminal" class="practice-card" data-aos="fade-up" data-delay="100">
         <div class="practice-icon">🔒</div>
         <h3 class="practice-name">Criminal Law &amp; Cheque Bounce</h3>
         <p class="practice-desc">
@@ -1041,7 +1046,7 @@
         <a href="#contact" class="practice-link">Enquire Now →</a>
       </div>
 
-      <div class="practice-card" data-aos="fade-up" data-delay="200">
+      <div id="service-matrimonial" class="practice-card" data-aos="fade-up" data-delay="200">
         <div class="practice-icon">👨‍👩‍👧</div>
         <h3 class="practice-name">Matrimonial &amp; Family Law</h3>
         <p class="practice-desc">
@@ -1053,7 +1058,7 @@
         <a href="#contact" class="practice-link">Enquire Now →</a>
       </div>
 
-      <div class="practice-card" data-aos="fade-up" data-delay="0">
+      <div id="service-labour" class="practice-card" data-aos="fade-up" data-delay="0">
         <div class="practice-icon">🏛️</div>
         <h3 class="practice-name">Labour, Service &amp; Employment</h3>
         <p class="practice-desc">
@@ -1065,7 +1070,7 @@
         <a href="#contact" class="practice-link">Enquire Now →</a>
       </div>
 
-      <div class="practice-card" data-aos="fade-up" data-delay="100">
+      <div id="service-documentation" class="practice-card" data-aos="fade-up" data-delay="100">
         <div class="practice-icon">📝</div>
         <h3 class="practice-name">Legal Documentation</h3>
         <p class="practice-desc">
@@ -1078,7 +1083,7 @@
         <a href="#contact" class="practice-link">Enquire Now →</a>
       </div>
 
-      <div class="practice-card" data-aos="fade-up" data-delay="200">
+      <div id="service-property" class="practice-card" data-aos="fade-up" data-delay="200">
         <div class="practice-icon">🏠</div>
         <h3 class="practice-name">Property &amp; Power of Attorney</h3>
         <p class="practice-desc">
@@ -1090,19 +1095,19 @@
         <a href="#contact" class="practice-link">Enquire Now →</a>
       </div>
 
-      <div class="practice-card" data-aos="fade-up" data-delay="0">
+      <div id="service-debt" class="practice-card" data-aos="fade-up" data-delay="0">
         <div class="practice-icon">🏦</div>
         <h3 class="practice-name">Debt Recovery &amp; Banking (DRT / SARFAESI)</h3>
         <p class="practice-desc">
           Bank threatening to seize your property over a loan? Or are you a lender
           trying to recover money? We handle cases at the Debt Recovery Tribunal (DRT),
           Debt Recovery Appellate Tribunal (DRAT), SARFAESI Act proceedings, and
-          Rent Control Cases (RLTOP).
+          Rent Control Cases.
         </p>
         <a href="#contact" class="practice-link">Enquire Now →</a>
       </div>
 
-      <div class="practice-card" data-aos="fade-up" data-delay="100">
+      <div id="service-tribunals" class="practice-card" data-aos="fade-up" data-delay="100">
         <div class="practice-icon">🚆</div>
         <h3 class="practice-name">Tribunals &amp; Accident Cases</h3>
         <p class="practice-desc">
@@ -1114,7 +1119,7 @@
         <a href="#contact" class="practice-link">Enquire Now →</a>
       </div>
 
-      <div class="practice-card" data-aos="fade-up" data-delay="200">
+      <div id="service-writ" class="practice-card" data-aos="fade-up" data-delay="200">
         <div class="practice-icon">📜</div>
         <h3 class="practice-name">Writ, Probate &amp; Original Side</h3>
         <p class="practice-desc">
@@ -1122,6 +1127,32 @@
           person's estate? We handle High Court Writ Petitions (against unlawful
           government actions), Original Side matters, Probate of Will, Letters of
           Administration, and Gazette Publications for name or document corrections.
+        </p>
+        <a href="#contact" class="practice-link">Enquire Now →</a>
+      </div>
+
+      <div id="service-insolvency" class="practice-card" data-aos="fade-up" data-delay="0">
+        <div class="practice-icon">🏢</div>
+        <h3 class="practice-name">Insolvency</h3>
+        <p class="practice-desc">
+          Unable to repay debts or dealing with a bankrupt individual or company? We
+          guide you through the entire process. Handles personal and corporate insolvency
+          matters, creditor claims, debt restructuring proceedings, and representation
+          before the National Company Law Tribunal (NCLT) under the Insolvency and
+          Bankruptcy Code (IBC).
+        </p>
+        <a href="#contact" class="practice-link">Enquire Now →</a>
+      </div>
+
+      <div id="service-arbitration" class="practice-card" data-aos="fade-up" data-delay="100">
+        <div class="practice-icon">🤝</div>
+        <h3 class="practice-name">Arbitration</h3>
+        <p class="practice-desc">
+          Want to resolve a dispute quickly and privately — without going through a
+          lengthy court process? Arbitration is a faster, confidential alternative.
+          We handle commercial, contractual, and property disputes through arbitration,
+          including drafting arbitration clauses, representing clients before arbitrators,
+          and enforcing arbitral awards in court.
         </p>
         <a href="#contact" class="practice-link">Enquire Now →</a>
       </div>
