@@ -790,18 +790,19 @@
     }
     a.hero-service-tag { text-decoration: none; cursor: pointer; }
     .practice-card { scroll-margin-top: 100px; }
-    .hero-service-group {
-      background: rgba(212,160,23,.06);
-      border: 1px solid rgba(212,160,23,.32);
-      border-radius: 12px;
-      padding: 10px 14px;
-      display: flex; flex-direction: column; gap: 8px;
+    /* Expandable tag group */
+    .hero-tag-expandable { display: inline-flex; flex-direction: column; gap: 8px; vertical-align: top; }
+    .hero-tag-expandable .hero-service-tag.toggle-tag { cursor: pointer; user-select: none; }
+    .hero-tag-expandable .hero-service-tag.toggle-tag .expand-arrow {
+      font-size: .55rem; margin-left: 4px; transition: transform .25s ease;
+      display: inline-block;
     }
-    .hero-service-group-label {
-      font-size: .65rem; letter-spacing: .16em;
-      text-transform: uppercase; color: var(--gold); font-weight: 700;
+    .hero-tag-expandable .hero-service-tag.toggle-tag.open .expand-arrow { transform: rotate(180deg); }
+    .hero-expand-items {
+      display: none; flex-wrap: wrap; gap: 6px; padding-left: 10px;
+      border-left: 2px solid rgba(212,160,23,.35);
     }
-    .hero-service-sub-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .hero-expand-items.open { display: flex; }
 
     /* ─── Laptop breakpoint (1280px) ────────────────────────────── */
     @media (max-width: 1280px) {
@@ -904,12 +905,14 @@
           <a href="#service-criminal" class="hero-service-tag"><span class="tag-dot"></span>Cheque Bounce (NI Act 138)</a>
           <a href="#service-matrimonial" class="hero-service-tag"><span class="tag-dot"></span>Matrimonial &amp; Divorce</a>
           <a href="#service-labour" class="hero-service-tag"><span class="tag-dot"></span>Labour &amp; Service Matters</a>
+          <a href="#service-writ" class="hero-service-tag"><span class="tag-dot"></span>Writ Petitions</a>
           <a href="#service-property" class="hero-service-tag"><span class="tag-dot"></span>Legal Opinion</a>
-          <div class="hero-service-group">
-            <div class="hero-service-group-label">Legal Documentation</div>
-            <div class="hero-service-sub-tags">
+          <div class="hero-tag-expandable">
+            <span class="hero-service-tag toggle-tag" onclick="toggleServiceGroup(this)">
+              <span class="tag-dot"></span>Legal Documentation<span class="expand-arrow">▼</span>
+            </span>
+            <div class="hero-expand-items">
               <a href="#service-documentation" class="hero-service-tag"><span class="tag-dot"></span>Sale &amp; Partition Deed</a>
-              <a href="#service-documentation" class="hero-service-tag"><span class="tag-dot"></span>Writ Petitions</a>
               <a href="#service-documentation" class="hero-service-tag"><span class="tag-dot"></span>Affidavit &amp; Will</a>
               <a href="#service-documentation" class="hero-service-tag"><span class="tag-dot"></span>Rental &amp; Construction Agreement</a>
               <a href="#service-documentation" class="hero-service-tag"><span class="tag-dot"></span>Power of Attorney (GPA / SPA)</a>
@@ -1738,6 +1741,12 @@ ${message || '—'}
       setBtn(btn, 'error', '✗ Failed — Try Again');
       setTimeout(() => setBtn(btn, '', 'Send Message →'), 3500);
     }
+  }
+
+  /* ── Legal Documentation expandable tag ── */
+  function toggleServiceGroup(el) {
+    el.classList.toggle('open');
+    el.nextElementSibling.classList.toggle('open');
   }
 
   /* ── Smooth scroll for anchor links ── */
