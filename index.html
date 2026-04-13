@@ -676,6 +676,37 @@
     [data-aos="fade-left"] { transform: translateX(24px); }
     [data-aos="fade-left"].aos-animate { transform: none; }
 
+    /* ─── Hero Service Tags ─────────────────────────────────────── */
+    .hero-services-label {
+      font-size: .7rem; font-weight: 600; letter-spacing: .16em;
+      text-transform: uppercase; color: rgba(255,255,255,.35);
+      margin-bottom: 10px; margin-top: 28px;
+    }
+    .hero-service-tags {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px;
+    }
+    .hero-service-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 14px;
+      background: rgba(184,146,58,.08);
+      border: 1px solid rgba(184,146,58,.28);
+      border-radius: 100px;
+      font-size: .76rem; font-weight: 500;
+      color: rgba(255,255,255,.75);
+      transition: var(--transition);
+      cursor: default;
+      white-space: nowrap;
+    }
+    .hero-service-tag:hover {
+      background: rgba(184,146,58,.18);
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+    .hero-service-tag .tag-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0;
+    }
+
     /* ─── Laptop breakpoint (1280px) ────────────────────────────── */
     @media (max-width: 1280px) {
       #navbar .nav-inner { padding: 18px 28px; }
@@ -767,10 +798,39 @@
           Justice Delivered<br />With <em>Precision</em><br />& Purpose
         </h1>
         <p class="hero-sub">
-          Advocate Poongavanan Manikannan brings over 25 years of seasoned expertise
-          across Civil, Criminal, Matrimonial, Labour, Property, and Tribunal matters —
-          advocating relentlessly for your rights at the High Court of Madras and beyond.
+          With over 25 years at the High Court of Madras, Advocate Poongavanan
+          Manikannan handles a wide range of legal matters — from court cases to
+          document drafting. Whatever your legal problem, you're in experienced hands.
         </p>
+
+        <div class="hero-services-label">Services We Handle</div>
+        <div class="hero-service-tags">
+          <span class="hero-service-tag"><span class="tag-dot"></span>Civil Suits &amp; Appeals</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Criminal Cases</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Cheque Bounce (NI Act 138)</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Matrimonial &amp; Divorce</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Labour &amp; Service Matters</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Writ Petitions</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Sale &amp; Partition Deed</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Affidavit &amp; Will</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Rental &amp; Construction Agreement</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Title Verification</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Power of Attorney (GPA / SPA)</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>DRT / DRAT / SARFAESI</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Rent Control Cases</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Motor Accident (MCOP)</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Railway Claims Tribunal</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Central Administrative Tribunal</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Green Tribunal</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Senior Citizen Protection</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>HR &amp; CE Matters</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Probate of Will</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Letter of Administration</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Gazette Publication</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Land Acquisition Cases</span>
+          <span class="hero-service-tag"><span class="tag-dot"></span>Arbitration</span>
+        </div>
+
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary">Schedule Consultation →</a>
           <a href="#practice" class="btn btn-outline">Explore Practice Areas</a>
